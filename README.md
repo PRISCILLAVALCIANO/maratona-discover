@@ -13,6 +13,6 @@ E separando o CSS em arquivo externo
 
 Página finalizada da aula 01
 
-<img src="/src/br/com/projectimages/aula01.png?w=512">
+<img src="./projectimages/aula01.png?w=512">
 
 ![](/src/br/com/projectimages/aula01.png)
