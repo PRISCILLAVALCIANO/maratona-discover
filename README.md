@@ -15,4 +15,4 @@ Página finalizada da aula 01
 
 <img src="./projectimages/aula01.png?w=512"height="512"width="250">
 
-![](/projectimages/aula01.png)
+![](./projectimages/aula01.png)
