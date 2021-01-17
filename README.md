@@ -13,4 +13,4 @@ E separando o CSS em arquivo externo
 
 Página finalizada da aula 01
 
-<img src"/projectimages/aula01.png?w=512" height="600" width="300">
+<img src="./projectimages/aula01.png?w=512" height="600" width="300">
