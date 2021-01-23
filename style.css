@@ -11,22 +11,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 html {
     font-size: 93.75%;
+    height: 100%;
 }
 
 
 /*Body*/
 body {
-    background: #f0f2f5;
+    background: linear-gradient(#f0f2f5, #000000);
     font-family: 'Poppins', sans-serif;
 }
 
 /*Header*/
 header {
-    background: #2D4A22;
+    background: linear-gradient(#2D4A22, #000000);
     padding: 2rem 0 10rem;
     text-align: center;
 }
@@ -103,13 +105,13 @@ h2 {
 
 /*Botão transação*/
 a {
-    color: var(--green);
+    color: #ADFF2F;
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
-    color: var(--light-green);
+    color: #FFD700;
 }
 
 .button.new {
@@ -288,10 +290,12 @@ button:hover {
 
 /*Footer*/
 footer {
-    text-align: center;
+    text-align:  center;
     padding: 4rem 0 2rem;
-    color: var(--dark-blue);
-    opacity: 0.6;
+    color: #ffffff;
+    margin: 30px;
+
+    
 }
 
 /*Responsive*/
