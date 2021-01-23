@@ -1,7 +1,10 @@
 /*Global*/
 :root{
     --dark-blue: #363f5f;
-    --gray-blue: #969cb3; 
+    --gray-blue: #969cb3;
+    --green: #49AA26;
+    --light-green: #3dd705;
+    --red: #e92929;
 }
 
 * {
@@ -94,19 +97,19 @@ h2 {
 }
 
 .card.total {
-    background: #49AA26;
+    background: var(--green);
     color: #fff;
 }
 
 /*Botão transação*/
 a {
-    color: #49AA26;
+    color: var(--green);
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
-    color: #3dd705;
+    color: var(--light-green);
 }
 
 .button.new {
@@ -168,7 +171,7 @@ td.income {
 }
 
 td.expense {
-    color: #e92929;
+    color: var(--red);
 }
 
 /*Modal*/
@@ -176,6 +179,7 @@ td.expense {
 .modal-overlay {
     width: 100%;
     height: 100%;
+
     background-color: rgba(0, 0, 0, 0.7);
 
     position: fixed;
@@ -187,6 +191,8 @@ td.expense {
 
     opacity: 0;
     visibility: hidden;
+
+    z-index: 999;
 }
 
 .modal-overlay.active {
@@ -197,9 +203,88 @@ td.expense {
 .modal {
     background: #F0F2F5;
     padding: 2.4rem;
-    position: relative;
+
+    position: realtive;
+    z-index: 1;
 }
 
+/*Formulário*/
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+
+#form form input {
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: 0.8rem;
+
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small {
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+
+    color: #ffffff;
+    background: var(--green);
+
+    border-radius: 0.25rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--light-green);
+
+}
+
+.button.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+
+    transition: 0.2s;
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
 
 /*Footer*/
 footer {
