@@ -291,11 +291,13 @@ button:hover {
 /*Footer*/
 footer {
     text-align:  center;
-    padding: 4rem 0 2rem;
+    padding: 10rem 0 2rem;
     color: #ffffff;
-    margin: 30px;
+    margin: 30px; 
+}
 
-    
+footer p {
+    padding: 40px;
 }
 
 /*Responsive*/
