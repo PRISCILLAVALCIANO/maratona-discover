@@ -17,13 +17,14 @@ const Modal = {
 }
 
 const Storage = {
+    localName: 'dev.finances:transactions',
     get() {
-        return JSON.parse(localStorage.getItem("dev.finances:transactions")) || 
+        return JSON.parse(localStorage.getItem("Storage.localName")) || 
         [];
     },
 
     set(transactions) {
-        localStorage.setItem("dev.finances:transactions", JSON.stringify(transactions))
+        localStorage.setItem(Storage.localName, JSON.stringify(transactions))
     }
 }
 
