@@ -44,9 +44,9 @@ Aplicação de cores gradiente na página
 
 ### Terceira aula 28/01
 
-Nessa aula deixamos a aplicação totalmente funcional
+Nessa aula deixamos a aplicação totalmente funcional, manipulando a aplicação com o Javascript
 
-- Montando a tabela com o Javascript
+- Montando a tabela
 - Formatação dos valores no padrão de moeda
 - Calculo do balanço (entradas menos saídas e o saldo final)
 - Inclusão de transações através do Modal
