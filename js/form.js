@@ -133,8 +133,8 @@ const DOM = {
 
 const Utils = {
     formatAmount(value) {
-        value = Number(value.replace(/\,\./g, "")) * 100;
-        return Number(value.toFixed(0));
+        value = value * 100;
+        return Math.round(value);
     },
 
     formatDate(date) {
