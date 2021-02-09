@@ -1,10 +1,17 @@
 /*Global*/
 :root{
     --dark-blue: #363f5f;
-    --gray-blue: #969cb3;
     --green: #49AA26;
     --light-green: #3dd705;
     --red: #e92929;
+    --bg: #f0f2f5;
+    --bg-white: #FFFFFF;
+    --text-white: #FFFFFF;
+    --bg-header: #2D4A22;
+    --text-logo: #FFFFFF;
+    --text-table: #969cb3;
+    --bg-modal: #F0F2F5;
+    
 }
 
 * {
@@ -15,27 +22,75 @@
 }
 
 html {
-    font-size: 93.75%;
-    height: 100%;
+    font-size: 93.75%; /* Equivalente 15px*/
 }
 
 
 /*Body*/
 body {
-    background: linear-gradient(#f0f2f5, #000000);
+    background: var(--bg);
     font-family: 'Poppins', sans-serif;
 }
 
 /*Header*/
 header {
-    background: linear-gradient(#2D4A22, #000000);
+    background: var(--bg-header);
     padding: 2rem 0 10rem;
     text-align: center;
 }
 
 #logo {
-    color: #fff;
+    color: var(--text-logo);
     font-weight: 100;
+}
+
+.toggleTheme {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px;
+}
+
+.toggleTheme input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.toggleTheme label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: #808080;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+
+}
+
+.toggleTheme label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-white);
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.toggleTheme input:checked + label {
+    background-color: #12a454;
+}
+
+.toggleTheme input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.toggleTheme label:active:after {
+    width: 45px;
 }
 
 /*Main*/
@@ -62,6 +117,7 @@ h2 {
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
     color: var(--dark-blue);
+
     font-weight: normal;
 }
 
@@ -77,10 +133,15 @@ h2 {
 
 /*Cards*/
 .card {
-    background: #fff;
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
+    
+}
+
+.card.income,
+.card.expense {
+    background: var(--bg-white);
     color: var(--dark-blue);
 }
 
@@ -95,6 +156,7 @@ h2 {
 .card p {
     font-size: 2rem;
     line-height: 3rem;
+
     margin-top: 1rem;
 }
 
@@ -105,13 +167,12 @@ h2 {
 
 /*Botão transação*/
 a {
-    color: #ADFF2F;
+    color: var(--green);
     text-decoration: none;
-    transition: 0.3s;
 }
 
 a:hover {
-    color: #FFD700;
+    color: var(--light-green);
 }
 
 .button.new {
@@ -119,7 +180,28 @@ a:hover {
     margin-bottom: .8rem;
 }
 
-/*Seção transaction*/
+.search {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+/*Filtro de pesquisa*/
+
+.search label {
+    color: var(--green);
+    padding: 0.7em;
+}
+
+#filter-transaction {
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+}
+
+/*Seção transaction(tabela)*/
 
 #transaction {
     display: block;
@@ -127,11 +209,10 @@ a:hover {
     overflow-x: auto;
 }
 
-/*Table*/
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: var(--gray-blue);
+    color: var(--text-table);
 }
 
 table thead tr th:first-child, 
@@ -145,7 +226,7 @@ table tbody tr td:last-child {
 }
 
 table thead th {
-    background: #fff;
+    background: var(--bg-white);
     font-weight: normal;
     padding: 1rem 2rem;
     text-align: left;
@@ -153,6 +234,7 @@ table thead th {
 
 table tbody tr {
     opacity: 0.7;
+    margin: 2px;
 }
 
 table tbody tr:hover {
@@ -160,7 +242,7 @@ table tbody tr:hover {
 }
 
 table tbody td {
-    background: #fff;
+    background: var(--bg-white);
     padding: 1rem 2rem;
 }
 
@@ -174,6 +256,12 @@ td.income {
 
 td.expense {
     color: var(--red);
+}
+
+/*Filtro*/
+
+.invisible {
+    display: none;
 }
 
 /*Modal*/
@@ -203,7 +291,7 @@ td.expense {
 }
 
 .modal {
-    background: #F0F2F5;
+    background: var(--bg-modal);
     padding: 2.4rem;
 
     position: realtive;
@@ -234,6 +322,7 @@ td.expense {
 
 .input-group small {
     opacity: 0.4;
+    font-size: 0.9rem;
 }
 
 .input-group.actions {
@@ -291,14 +380,12 @@ button:hover {
 /*Footer*/
 footer {
     text-align:  center;
-    padding: 10rem 0 2rem;
-    color: #ffffff;
-    margin: 30px; 
+    padding: 4rem 0 2rem;
+    color: var(--dark-blue);
+
+    opacity: 0.6; 
 }
 
-footer p {
-    padding: 40px;
-}
 
 /*Responsive*/
 /*A partir de 800px aplica a regra abaixo*/

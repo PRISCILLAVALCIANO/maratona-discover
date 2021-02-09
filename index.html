@@ -5,12 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>dev.finance$</title>
 
+        <link rel="stylesheet" href="./reset.css">
         <link rel="stylesheet" href="./style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
+            <div class="toggleTheme">
+                <input id="changeTheme" type="checkbox" name="toggle">
+                <label for="changeTheme">Theme</label>
+            </div>
             <img src="./assets/logo.svg" alt="Logo dev.finance$">
         </header>
 
@@ -18,7 +23,7 @@
             <section id="balance">
                 <h2 class="sr-only">Balanço</h2>
 
-                <div class="card">
+                <div class="card income">
                     <h3>
                        <span>Entradas</span>
                        <img src="./assets/income.svg" alt="Ícone de entrada">
@@ -26,7 +31,7 @@
                     <p id="incomeDisplay">R$ 0,00</p>
                 </div>
 
-                <div class="card">
+                <div class="card expense">
                     <h3>
                         <span>Saídas</span>
                         <img src="./assets/expense.svg" alt="Ícone de saída">
@@ -49,6 +54,11 @@
                 <a href="#" 
                 onclick="Modal.open()" 
                 class="button new">+Nova Transação</a>
+
+                <div class="search">
+                    <label for="filter-transaction">Pesquisa: </label>
+                    <input type="text" name="filter" id="filter-transaction" placeholder ="Informe a transação">
+                </div>
 
                 <table id="data-table">
                     <thead>
@@ -97,11 +107,11 @@
             </div>
         </div>
 
-        <footer>
-            <img src="./assets/logo.svg" alt="Logo dev.finance$">
-            <p>&copy; Copyright dev.finance$ - 2021</p>
-        </footer>
+        <footer><p>dev.finance$</p></footer>
 
         <script src="./js/form.js"></script>
+        <script src="./js/filter-transaction.js"></script>
+        <script src="./js/theme.js"></script>
+        
     </body>
 </html>
