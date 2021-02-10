@@ -65,6 +65,7 @@ Nessa aula deixamos a aplicação totalmente funcional, manipulando a aplicaçã
 
 <br>
 <br>
+
 ### Agradecimentos
 
 <a href="https://www.youtube.com/watch?v=NlDr6JX3VvA&t">MayK Brito</a>
