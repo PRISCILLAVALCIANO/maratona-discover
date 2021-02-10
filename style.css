@@ -11,6 +11,7 @@
     --text-logo: #FFFFFF;
     --text-table: #969cb3;
     --bg-modal: #F0F2F5;
+    --card-total: #49AA26;
     
 }
 
@@ -161,7 +162,7 @@ h2 {
 }
 
 .card.total {
-    background: var(--green);
+    background: var(--card-total);
     color: #fff;
 }
 
@@ -180,18 +181,21 @@ a:hover {
     margin-bottom: .8rem;
 }
 
+
+/*Filtro de pesquisa*/
+
 .search {
     margin-bottom: 10px;
     display: flex;
     justify-content: right;
 }
 
-/*Filtro de pesquisa*/
-
 .search label {
     color: var(--green);
     padding: 0.7em;
 }
+
+
 
 #filter-transaction {
     width: 300px;
@@ -199,6 +203,7 @@ a:hover {
     border: none;
     border-radius: 0.2rem;
     padding: 0.8rem;
+    background: var(--bg-white);
 }
 
 /*Seção transaction(tabela)*/
@@ -308,6 +313,7 @@ td.expense {
 }
 
 #form form input {
+    background: var(--bg-white);
     border: none;
     border-radius: 0.2rem;
 
@@ -323,6 +329,7 @@ td.expense {
 .input-group small {
     opacity: 0.4;
     font-size: 0.9rem;
+    color: #49AA26;
 }
 
 .input-group.actions {
